@@ -2,15 +2,41 @@
 {
     partial class MemberManagement
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        private Panel panelHeader;
+        private Panel panelMenu;
+        private Panel panelMain;
+        private Panel panel1;
+
+        private Label lblTitle;
+        private Label lblConsole;
+        private Label lblWelcome;
+        private Label lblAdmin;
+
+        private Label lblUserAuth;
+        private Label lblNote;
+        private Label label1;
+
+        private Button btnLogout;
+        private Button btnBook;
+        private Button btnMember;
+        private Button btnUser;
+        private Button btnBorrow;
+        private Button btnReports;
+        private Button btnSearch;
+        private Button btnRefresh;
+        private Button btnCreateAccount;
+
+        private ComboBox cmbRole;
+        private TextBox txtPassword;
+        private TextBox txtUsername;
+
+        private ListView listView1;
+        private ColumnHeader ID;
+        private ColumnHeader Username;
+        private ColumnHeader Role;
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,12 +46,6 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
