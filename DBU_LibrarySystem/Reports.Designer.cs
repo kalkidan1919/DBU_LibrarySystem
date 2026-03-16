@@ -6,6 +6,23 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.Button btnBookManagement;
+        private System.Windows.Forms.Button btnMemberManagement;
+        private System.Windows.Forms.Button btnUserManagement;
+        private System.Windows.Forms.Button btnBorrowReturnNav;
+        private System.Windows.Forms.Button btnReportsNav;
+        private System.Windows.Forms.Button btnSearchNav;
+        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnInventory;
+        private System.Windows.Forms.Button btnCurrentLoans;
+        private System.Windows.Forms.Button btnOverdueList;
+        private System.Windows.Forms.Label lblSectionTitle;
+        private System.Windows.Forms.DataGridView dgvOverdue;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,275 +45,203 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            label1 = new Label();
-            btnLogout = new Button();
-            panelMenu = new Panel();
-            btnBooks = new Button();
-            btnMembers = new Button();
-            btnUsers = new Button();
-            btnBorrowReturn = new Button();
-            btnReports = new Button();
-            btnSearch = new Button();
-            panel2 = new Panel();
-            label2 = new Label();
-            btnInventorySize = new Button();
-            btnOverdueList = new Button();
-            btnCurrentLoans = new Button();
-            label3 = new Label();
-            dgvReports = new DataGridView();
-            BookID = new DataGridViewTextBoxColumn();
-            MemberID = new DataGridViewTextBoxColumn();
-            DueDate = new DataGridViewTextBoxColumn();
-            panel1.SuspendLayout();
-            panelMenu.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvReports).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.lblSectionTitle = new System.Windows.Forms.Label();
+            this.btnInventory = new System.Windows.Forms.Button();
+            this.btnCurrentLoans = new System.Windows.Forms.Button();
+            this.btnOverdueList = new System.Windows.Forms.Button();
+            this.dgvOverdue = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOverdue)).BeginInit();
+            this.SuspendLayout();
             // 
-            // panel1
+            // panelTop
             // 
-            panel1.BackColor = Color.FromArgb(26, 95, 150);
-            panel1.Controls.Add(btnLogout);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(800, 60);
-            panel1.TabIndex = 0;
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(122)))), ((int)(((byte)(179)))));
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Height = 60;
+            this.panelTop.Controls.Add(this.lblTitle);
+            this.panelTop.Controls.Add(this.lblWelcome);
+            this.panelTop.Controls.Add(this.btnLogout);
             // 
-            // label1
+            // lblTitle
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(272, 25);
-            label1.TabIndex = 1;
-            label1.Text = "DBU Library | Admin Console";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.Location = new System.Drawing.Point(12, 18);
+            this.lblTitle.Text = "DBU Library | Admin Console";
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblWelcome.Location = new System.Drawing.Point(620, 20);
+            this.lblWelcome.Text = "Welcome, Admin";
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(713, 22);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(75, 23);
-            btnLogout.TabIndex = 2;
-            btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = true;
-            btnLogout.Click += btnLogout_Click;
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.Location = new System.Drawing.Point(800, 15);
+            this.btnLogout.Size = new System.Drawing.Size(80, 30);
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.FlatAppearance.BorderSize = 1;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
             // 
-            // panelMenu
+            // panelLeft
             // 
-            panelMenu.Controls.Add(btnSearch);
-            panelMenu.Controls.Add(btnReports);
-            panelMenu.Controls.Add(btnBorrowReturn);
-            panelMenu.Controls.Add(btnUsers);
-            panelMenu.Controls.Add(btnMembers);
-            panelMenu.Controls.Add(btnBooks);
-            panelMenu.Dock = DockStyle.Left;
-            panelMenu.Location = new Point(0, 60);
-            panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(200, 390);
-            panelMenu.TabIndex = 1;
+            this.panelLeft.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelLeft.Width = 200;
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Padding = new System.Windows.Forms.Padding(10);
+            // navigation buttons
+            this.btnBookManagement = new System.Windows.Forms.Button();
+            this.btnMemberManagement = new System.Windows.Forms.Button();
+            this.btnUserManagement = new System.Windows.Forms.Button();
+            this.btnBorrowReturnNav = new System.Windows.Forms.Button();
+            this.btnReportsNav = new System.Windows.Forms.Button();
+            this.btnSearchNav = new System.Windows.Forms.Button();
+
+            // common nav style
+            System.Drawing.Size navSize = new System.Drawing.Size(180, 48);
+            System.Windows.Forms.Padding navPadding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+
+            // btnBookManagement
+            this.btnBookManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBookManagement.Height = navSize.Height;
+            this.btnBookManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookManagement.FlatAppearance.BorderSize = 0;
+            this.btnBookManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBookManagement.Padding = navPadding;
+            this.btnBookManagement.Text = "Book Management";
+            // btnMemberManagement
+            this.btnMemberManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMemberManagement.Height = navSize.Height;
+            this.btnMemberManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMemberManagement.FlatAppearance.BorderSize = 0;
+            this.btnMemberManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMemberManagement.Padding = navPadding;
+            this.btnMemberManagement.Text = "Member Management";
+            // btnUserManagement
+            this.btnUserManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUserManagement.Height = navSize.Height;
+            this.btnUserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserManagement.FlatAppearance.BorderSize = 0;
+            this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserManagement.Padding = navPadding;
+            this.btnUserManagement.Text = "User Management";
+            // btnBorrowReturnNav
+            this.btnBorrowReturnNav.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBorrowReturnNav.Height = navSize.Height;
+            this.btnBorrowReturnNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrowReturnNav.FlatAppearance.BorderSize = 0;
+            this.btnBorrowReturnNav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrowReturnNav.Padding = navPadding;
+            this.btnBorrowReturnNav.Text = "Borrow/Return";
+            // btnReportsNav (selected)
+            this.btnReportsNav.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportsNav.Height = navSize.Height;
+            this.btnReportsNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportsNav.FlatAppearance.BorderSize = 0;
+            this.btnReportsNav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportsNav.Padding = navPadding;
+            this.btnReportsNav.Text = "Reports";
+            this.btnReportsNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(122)))), ((int)(((byte)(179)))));
+            this.btnReportsNav.ForeColor = System.Drawing.Color.White;
+            // btnSearchNav (bottom)
+            this.btnSearchNav.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearchNav.Height = navSize.Height;
+            this.btnSearchNav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchNav.FlatAppearance.BorderSize = 0;
+            this.btnSearchNav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearchNav.Padding = navPadding;
+            this.btnSearchNav.Text = "Search";
+
+            // add nav buttons in order
+            this.panelLeft.Controls.Add(this.btnSearchNav);
+            this.panelLeft.Controls.Add(this.btnReportsNav);
+            this.panelLeft.Controls.Add(this.btnBorrowReturnNav);
+            this.panelLeft.Controls.Add(this.btnUserManagement);
+            this.panelLeft.Controls.Add(this.btnMemberManagement);
+            this.panelLeft.Controls.Add(this.btnBookManagement);
             // 
-            // btnBooks
+            // panelMain
             // 
-            btnBooks.FlatStyle = FlatStyle.Flat;
-            btnBooks.Location = new Point(41, 18);
-            btnBooks.Name = "btnBooks";
-            btnBooks.Size = new Size(75, 45);
-            btnBooks.TabIndex = 0;
-            btnBooks.Text = " Book Management";
-            btnBooks.UseVisualStyleBackColor = true;
-            btnBooks.Click += button1_Click;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Padding = new System.Windows.Forms.Padding(20);
+            this.panelMain.BackColor = System.Drawing.Color.White;
+            this.panelMain.Controls.Add(this.lblSectionTitle);
+            this.panelMain.Controls.Add(this.btnInventory);
+            this.panelMain.Controls.Add(this.btnCurrentLoans);
+            this.panelMain.Controls.Add(this.btnOverdueList);
+            this.panelMain.Controls.Add(this.dgvOverdue);
             // 
-            // btnMembers
+            // lblSectionTitle
             // 
-            btnMembers.FlatStyle = FlatStyle.Flat;
-            btnMembers.Location = new Point(41, 81);
-            btnMembers.Name = "btnMembers";
-            btnMembers.Size = new Size(75, 45);
-            btnMembers.TabIndex = 0;
-            btnMembers.Text = "Member Management";
-            btnMembers.UseVisualStyleBackColor = true;
+            this.lblSectionTitle.AutoSize = true;
+            this.lblSectionTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSectionTitle.Location = new System.Drawing.Point(10, 10);
+            this.lblSectionTitle.Text = "Library Reports";
             // 
-            // btnUsers
+            // btnInventory
             // 
-            btnUsers.FlatStyle = FlatStyle.Flat;
-            btnUsers.Location = new Point(41, 145);
-            btnUsers.Name = "btnUsers";
-            btnUsers.Size = new Size(75, 45);
-            btnUsers.TabIndex = 0;
-            btnUsers.Text = "User Management";
-            btnUsers.UseVisualStyleBackColor = true;
-            // 
-            // btnBorrowReturn
-            // 
-            btnBorrowReturn.FlatStyle = FlatStyle.Flat;
-            btnBorrowReturn.Location = new Point(41, 207);
-            btnBorrowReturn.Name = "btnBorrowReturn";
-            btnBorrowReturn.Size = new Size(75, 45);
-            btnBorrowReturn.TabIndex = 0;
-            btnBorrowReturn.Text = "Borrow/Return";
-            btnBorrowReturn.UseVisualStyleBackColor = true;
-            // 
-            // btnReports
-            // 
-            btnReports.FlatStyle = FlatStyle.Flat;
-            btnReports.Location = new Point(41, 273);
-            btnReports.Name = "btnReports";
-            btnReports.Size = new Size(75, 45);
-            btnReports.TabIndex = 0;
-            btnReports.Text = "Reports";
-            btnReports.UseVisualStyleBackColor = true;
-            // 
-            // btnSearch
-            // 
-            btnSearch.FlatStyle = FlatStyle.Flat;
-            btnSearch.Location = new Point(41, 333);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(75, 45);
-            btnSearch.TabIndex = 0;
-            btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(dgvReports);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(btnCurrentLoans);
-            panel2.Controls.Add(btnOverdueList);
-            panel2.Controls.Add(btnInventorySize);
-            panel2.Controls.Add(label2);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(200, 60);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(600, 390);
-            panel2.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(29, 28);
-            label2.Name = "label2";
-            label2.Size = new Size(170, 30);
-            label2.TabIndex = 0;
-            label2.Text = " Library Reports";
-            // 
-            // btnInventorySize
-            // 
-            btnInventorySize.BackColor = Color.FromArgb(45, 110, 163);
-            btnInventorySize.FlatStyle = FlatStyle.Flat;
-            btnInventorySize.ForeColor = SystemColors.ButtonFace;
-            btnInventorySize.Location = new Point(29, 81);
-            btnInventorySize.Name = "btnInventorySize";
-            btnInventorySize.Size = new Size(75, 23);
-            btnInventorySize.TabIndex = 1;
-            btnInventorySize.Text = "Inventory Size";
-            btnInventorySize.UseVisualStyleBackColor = false;
-            // 
-            // btnOverdueList
-            // 
-            btnOverdueList.BackColor = Color.FromArgb(45, 110, 163);
-            btnOverdueList.FlatStyle = FlatStyle.Flat;
-            btnOverdueList.ForeColor = SystemColors.ButtonFace;
-            btnOverdueList.Location = new Point(248, 81);
-            btnOverdueList.Name = "btnOverdueList";
-            btnOverdueList.Size = new Size(75, 23);
-            btnOverdueList.TabIndex = 1;
-            btnOverdueList.Text = "Overdue List";
-            btnOverdueList.UseVisualStyleBackColor = false;
+            this.btnInventory.Location = new System.Drawing.Point(10, 50);
+            this.btnInventory.Size = new System.Drawing.Size(120, 30);
+            this.btnInventory.Text = "Inventory Size";
             // 
             // btnCurrentLoans
             // 
-            btnCurrentLoans.BackColor = Color.FromArgb(45, 110, 163);
-            btnCurrentLoans.FlatStyle = FlatStyle.Flat;
-            btnCurrentLoans.ForeColor = SystemColors.ButtonHighlight;
-            btnCurrentLoans.Location = new Point(136, 81);
-            btnCurrentLoans.Name = "btnCurrentLoans";
-            btnCurrentLoans.Size = new Size(75, 23);
-            btnCurrentLoans.TabIndex = 1;
-            btnCurrentLoans.Text = "Current Loans";
-            btnCurrentLoans.UseVisualStyleBackColor = false;
+            this.btnCurrentLoans.Location = new System.Drawing.Point(140, 50);
+            this.btnCurrentLoans.Size = new System.Drawing.Size(120, 30);
+            this.btnCurrentLoans.Text = "Current Loans";
             // 
-            // label3
+            // btnOverdueList
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(23, 110);
-            label3.Name = "label3";
-            label3.Size = new Size(155, 21);
-            label3.TabIndex = 2;
-            label3.Text = "Overdue Books List";
+            this.btnOverdueList.Location = new System.Drawing.Point(270, 50);
+            this.btnOverdueList.Size = new System.Drawing.Size(120, 30);
+            this.btnOverdueList.Text = "Overdue List";
             // 
-            // dgvReports
+            // dgvOverdue
             // 
-            dgvReports.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvReports.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvReports.Columns.AddRange(new DataGridViewColumn[] { BookID, MemberID, DueDate });
-            dgvReports.Location = new Point(23, 134);
-            dgvReports.Name = "dgvReports";
-            dgvReports.RowHeadersVisible = false;
-            dgvReports.Size = new Size(566, 253);
-            dgvReports.TabIndex = 3;
+            this.dgvOverdue.Location = new System.Drawing.Point(10, 100);
+            this.dgvOverdue.Size = new System.Drawing.Size(560, 300);
+            this.dgvOverdue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvOverdue.AllowUserToAddRows = false;
+            this.dgvOverdue.AllowUserToDeleteRows = false;
+            this.dgvOverdue.ReadOnly = true;
+            this.dgvOverdue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            // Add columns
+            this.dgvOverdue.Columns.Add("BookID", "Book ID");
+            this.dgvOverdue.Columns.Add("MemberID", "Member ID");
+            this.dgvOverdue.Columns.Add("DueDate", "Due Date");
+            // sample rows
+            this.dgvOverdue.Rows.Add(new object[] { "1", "2", "2026-01-27" });
+            this.dgvOverdue.Rows.Add(new object[] { "3", "1501713", "2026-01-28" });
+            this.dgvOverdue.Rows.Add(new object[] { "4", "2", "2026-02-18" });
             // 
-            // BookID
+            // Reports (form)
             // 
-            BookID.HeaderText = "BookID";
-            BookID.Name = "BookID";
-            // 
-            // MemberID
-            // 
-            MemberID.HeaderText = "MemberID";
-            MemberID.Name = "MemberID";
-            // 
-            // DueDate
-            // 
-            DueDate.HeaderText = "DueDate";
-            DueDate.Name = "DueDate";
-            // 
-            // Reports
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(panel2);
-            Controls.Add(panelMenu);
-            Controls.Add(panel1);
-            Name = "Reports";
-            Text = "Reports";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panelMenu.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvReports).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(900, 520);
+            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.panelLeft);
+            this.Controls.Add(this.panelTop);
+            this.Text = "Reports";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOverdue)).EndInit();
+            this.ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel panel1;
-        private Label label1;
-        private Button btnLogout;
-        private Panel panelMenu;
-        private Button btnSearch;
-        private Button btnReports;
-        private Button btnBorrowReturn;
-        private Button btnUsers;
-        private Button btnMembers;
-        private Button btnBooks;
-        private Panel panel2;
-        private Button btnCurrentLoans;
-        private Button btnOverdueList;
-        private Button btnInventorySize;
-        private Label label2;
-        private DataGridView dgvReports;
-        private DataGridViewTextBoxColumn BookID;
-        private DataGridViewTextBoxColumn MemberID;
-        private DataGridViewTextBoxColumn DueDate;
-        private Label label3;
     }
 }
