@@ -362,7 +362,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "MemberManagement";
+            //Name = "MemberManagement";
             Text = "MemberManagement";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
