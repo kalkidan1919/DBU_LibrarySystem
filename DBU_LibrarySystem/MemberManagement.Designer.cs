@@ -48,7 +48,7 @@
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
@@ -87,7 +87,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1362, 60);
+            panel1.Size = new Size(1362, 55);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -110,9 +110,9 @@
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 60);
+            panel2.Location = new Point(0, 55);
             panel2.Name = "panel2";
-            panel2.Size = new Size(264, 596);
+            panel2.Size = new Size(264, 601);
             panel2.TabIndex = 2;
             // 
             // button1
@@ -204,9 +204,9 @@
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(label2);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(264, 60);
+            panel3.Location = new Point(264, 55);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1098, 596);
+            panel3.Size = new Size(1098, 601);
             panel3.TabIndex = 3;
             // 
             // label2
@@ -314,14 +314,14 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.LightGray;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Name, Email });
             dataGridView1.EnableHeadersVisualStyles = false;
